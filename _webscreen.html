@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="style.css"> -->
+	<style>
+#wrapper {
+  background-color: black;
+  color: white;
+}
+#wrapper #calc {
+  background-color: blue;
+}
+#wrapper #answer {
+  text-align: right;
+}
+#wrapper #keys .key {
+  height: 50px;
+  text-align: center;
+}
+#wrapper #keys #num-keys {
+  width: 80%;
+  float: left;
+  background-color: gray;
+}
+#wrapper #keys #operator-keys {
+  width: 20%;
+  float: left;
+  background-color: aqua;
+}/*# sourceMappingURL=style.css.map */
+	</style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<!--    <script src="main.js"></script> -->
+<script>
+$(document).ready(function(){
+    var statement = "";
+    var answer = "";
+    $(".key").click(function(){
+        // alert(this.innerHTML);
+        if(this.innerHTML.toString() == "BS") {
+            statement = statement.slice(0,-1);
+            $("#statement").text(statement);
+            if(statement.length <= 0) {
+                $("#statement").text("0");
+                $("#answer").text("0");
+            }
+        }
+        else  if(this.innerHTML.toString() == "CA") {
+            statement = ""; 
+            if(statement.length <= 0) {
+                $("#statement").text("0");
+                $("#answer").text("0");
+            }
+        }
+        else{
+            statement+=this.innerHTML.toString();
+            $("#statement").text(statement);
+        }
+        answer = eval(statement);
+        $("#answer").text(answer);
+    })
+})
+</script>
+    <title>oreoreCalculator<title>
+</head>
+<body>
+    <h1>oreoreCalculator</h1>
+    <div id="wrapper">
+                <!-- 式 -->
+                <p id="statement">式…</p>
+                <!-- 結果 -->
+                <p id="answer">解…</p>
+
+        <div id="keys">
+            <table id="num-keys">
+                <!-- 数字キー -->
+                <tr>
+                    <td class="key">7</td>
+                    <td class="key">8</td>
+                    <td class="key">9</td>
+                </tr>
+                <tr>
+                    <td class="key">4</td>
+                    <td class="key">5</td>
+                    <td class="key">6</td>
+                </tr>
+                <tr>
+                    <td class="key">1</td>
+                    <td class="key">2</td>
+                    <td class="key">3</td>
+                </tr>
+                <tr>
+                    <td class="key">.</td>
+                    <td class="key">0</td>
+                    <td class="key"></td>
+                </tr>
+            </table>
+            <table id="operator-keys">
+               <tr>
+                <td class="key">/</td>
+                <td class="key">CA</td>
+               </tr>
+               <tr>
+                <td class="key">*</td>
+                <td class="key">BS</td>
+               </tr>
+               <tr>
+                <td class="key">-</td>
+                <td class="key">(</td>
+               </tr>
+               <tr>
+                <td class="key">+</td>
+                <td class="key">)</td>
+               </tr>
+            </table>
+        </div>
+    </div> 
+</body>
+</html>

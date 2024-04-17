@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <title>oreoreCalculator</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="calc">
+                <!-- 式 -->
+            <p id="statementArea">
+                <input type="text" name="statement" id="statement" placeholder="式…" onfocus="this.select()" oninput="inputCalc(this.value)">
+            </p>
+                <!-- 結果 -->
+                <p id="answerArea">
+                    <input type="text" name="answer" id="answer" placeholder="解…" onfocus="this.select()" value="">
+                </p>
+            </div>
+        <div id="keys">
+            <p class="line" id="line1">
+                <span class="key numKey">7</span>
+                <span class="key numKey" >8</span>
+                <span class="key numKey" >9</span>
+                <span class="key operatorKey" >/</span>
+                <span class="key operatorKey" >CA</span>
+            </p>
+            <p class="line" id="line2">
+                <span class="key numKey" >4</span>
+                <span class="key numKey" >5</span>
+                <span class="key numKey" >6</span>
+                <span class="key  operatorKey" >*</span>
+                <span class="key  operatorKey" >BS</span>
+            </p>
+            <p class="line" id="line4">
+                <span class="key numKey" >1</span>
+                <span class="key numKey" >2</span>
+                <span class="key numKey" >3</span>
+                <span class="key operatorKey" >-</span>
+                <span class="key operatorKey" >(</span>
+            </p>
+            <p class="line" id="line4">
+                <span class="key numKey" >.</span>
+                <span class="key numKey" >0</span>
+                <span class="key numKey" >00</span>
+                <span class="key operatorKey" >+</span>
+                <span class="key operatorKey" >)</span>
+            </p>
+        </div>
+    </div> 
+</body>
+</html>

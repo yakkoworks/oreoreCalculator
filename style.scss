@@ -1,0 +1,26 @@
+#wrapper {
+    background-color: black;
+    color: white;
+    #calc {
+        background-color: blue;
+    }
+#answer {
+    text-align: right;
+}
+    #keys {
+        .key {
+            height: 50px;
+            text-align: center;
+        }
+        #num-keys {
+            width: 80%;
+            float: left;
+            background-color: gray;
+        }
+        #operator-keys{
+            width: 20%;
+            float: left;
+            background-color: aqua;
+        }
+    }
+}

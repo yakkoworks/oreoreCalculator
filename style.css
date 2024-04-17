@@ -1,0 +1,69 @@
+#statement {
+  /* float: left; */
+  padding: 10px;
+}
+#answer {
+  font-size: x-large;
+  /* float: right; */
+  padding: 10px;
+  /* width: 40%; */
+}
+input {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  /* width: 50%; */
+}
+#keys {
+  clear: both;
+}
+#wrapper {
+  margin: 0 auto;
+  padding: 10px;
+  width: 450px;
+  background-color: #131314;
+  border-radius: 20px;
+  color: white;
+}
+#wrapper #calc {
+  /* border-radius: 25px; */
+  background-color: #2A2B2E;
+  padding: 10px;
+  border-radius: 20px;
+}
+#wrapper #answer {
+  text-align: right;
+}
+#wrapper #keys .key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 5px;
+  font-size: larger;
+}
+/* #wrapper #keys .key {
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  width: 80px;
+  height: 80px;
+} */
+p {
+  text-align: center;
+  display: flex;
+}
+#keys {
+  margin-top: 20px;
+}
+.line .numKey {
+  background-color: #1B1C1D;
+}
+.line .operatorKey{
+  background-color: #43474E;
+}
