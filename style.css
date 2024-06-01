@@ -1,9 +1,9 @@
 #statement {
   /* float: left; */
+  font-size: x-large;
   padding: 10px;
 }
 #answer {
-  font-size: x-large;
   /* float: right; */
   padding: 10px;
   /* width: 40%; */
@@ -31,6 +31,9 @@ input {
   background-color: #2A2B2E;
   padding: 10px;
   border-radius: 20px;
+}
+#wrapper #statement {
+  text-align: right;
 }
 #wrapper #answer {
   text-align: right;
